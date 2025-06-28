@@ -42,3 +42,67 @@ for x in mylist:
 mylist2 = [1,2,3,4,5]
 for y in mylist2:
     print(2**y)
+
+print(mylist*2)
+print(mylist + mylist2)
+print(max(mylist2))
+print(len(mylist))
+
+mylist2.append("elephant")
+print(mylist2)
+
+mylist2.insert(3, "egg")
+print(mylist2)
+
+mylist2.remove("egg")
+print(mylist2)
+
+mylist2.pop(3)
+print(mylist2)
+
+print(mylist2.index("elephant"))
+
+mylist2.pop(mylist2.index("elephant"))
+print(mylist2)
+
+a = [23, 1, 5, 99, 4, 65]
+a.sort()
+print(a)
+print(sorted(a))
+
+#tuples - not changing lists with paranthesis
+
+y = (1,2,3)
+print(type(y))
+print(y)
+print(y[2])
+
+y = list(y)
+y[2]= 10
+y = tuple(y)
+print(y)
+
+#Dictonary = {}, not index but key
+
+person = {'name': 'Melisa', 'surname': 'Akçam', 'gender': "female"}
+print(person['name'])
+
+person["newkey"] = 44   #adding new element w/o append
+
+print(person)
+
+print(person.items())
+print(person.keys())
+print(person.values())
+
+#MEMBERSHIP OPERATORS in, not in
+
+print(2 in mylist)
+
+#identity operators is, is not
+
+x = 5
+if type(x) is int:
+    print("x is an int")
+else:
+    print("x is not an int")
