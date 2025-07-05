@@ -11,7 +11,7 @@ if x > y:
 elif x < y:
    print("x is less than y")
 
-Loops
+#Loops
 x = 0
 while x <10:
     x +=1
@@ -107,7 +107,7 @@ if type(x) is int:
 else:
     print("x is not an int")
 
-FUNCTIONS
+#FUNCTIONS
 def add(x,y):
     print(x+y)
 
