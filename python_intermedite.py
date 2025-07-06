@@ -14,10 +14,10 @@ class Person:
         return "name:{}, age: {}, height: {}".format(self.name, self.age, self.height)
     
 person1 = Person("Layla", 12, 155)
-# print(str(person1))
-# print(person1)
-# person2 = Person("Can", 30, 175)
-# print(person2)
+print(str(person1))
+print(person1)
+person2 = Person("Can", 30, 175)
+print(person2)
 
 print(Person.amount)
 
@@ -42,73 +42,73 @@ class Car:
         self.color = new_color
         print(f"{self.brand} is now {self.color}.")
 
-# car1 = Car("Honda", "Blue")
-# print(car1)
-# car1.drive()     # Honda is now driving at 60 km/h.
-# car1.repaint("Black")
-# car1.stop()
+car1 = Car("Honda", "Blue")
+print(car1)
+car1.drive()     # Honda is now driving at 60 km/h.
+car1.repaint("Black")
+car1.stop()
 
 
 import threading
 import time
 
-# def func1():
-#     for x in range(10):
-#         print("ONE")
+def func1():
+    for x in range(10):
+        print("ONE")
 
-# def func2():
-#     for x in range(10):
-#         print("TWO")
+def func2():
+    for x in range(10):
+        print("TWO")
 
-# t1 = threading.Thread(target=func1)
-# t2 = threading.Thread(target=func2)
+t1 = threading.Thread(target=func1)
+t2 = threading.Thread(target=func2)
 
-# t1.start()
-# t2.start()
+t1.start()
+t2.start()
 
-# x = 1024
-# lock = threading.Lock()
+x = 1024
+lock = threading.Lock()
 
-# def double():
-#     global x, lock
-#     lock.acquire()
-#     while x < 2048*4:
-#         x *= 2
-#         time.sleep(1)
-#         print(x)
-#     print("Reached maximum!")
-#     lock.release()
+def double():
+    global x, lock
+    lock.acquire()
+    while x < 2048*4:
+        x *= 2
+        time.sleep(1)
+        print(x)
+    print("Reached maximum!")
+    lock.release()
 
-# def halve():
-#     global x, lock
-#     lock.acquire()
-#     while x > 1:
-#         x /= 2
-#         time.sleep(1)
-#         print(x)
-#     print("Reached minimum")
-#     lock.release()
+def halve():
+    global x, lock
+    lock.acquire()
+    while x > 1:
+        x /= 2
+        time.sleep(1)
+        print(x)
+    print("Reached minimum")
+    lock.release()
 
-# t1 = threading.Thread(target = double)
-# t2 = threading.Thread(target = halve)
+t1 = threading.Thread(target = double)
+t2 = threading.Thread(target = halve)
 
-# t1.start()
-# t2.start()
+t1.start()
+t2.start()
 
 
-# event = threading.Event()
+event = threading.Event()
 
-# def myfunction():
-#     print("Waiting for the event to trigger...")
-#     event.wait()
-#     print("Performing action XYZ now...")
+def myfunction():
+    print("Waiting for the event to trigger...")
+    event.wait()
+    print("Performing action XYZ now...")
 
-# t1 = threading.Thread(target=myfunction)
-# t1.start()
+t1 = threading.Thread(target=myfunction)
+t1.start()
 
-# x = input("Do you want to trigger the event? (y/n)")
-# if x == "y":
-#     event.set()
+x = input("Do you want to trigger the event? (y/n)")
+if x == "y":
+    event.set()
 
 file = open("text.txt", "w")
 file.write("Hello World!")
